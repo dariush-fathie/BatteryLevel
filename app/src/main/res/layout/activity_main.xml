@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shimmer_base_alpha="1"
+        app:shimmer_clip_to_children="true"
+        app:shimmer_direction="bottom_to_top"
+        app:shimmer_dropoff="0.01"
+        app:shimmer_duration="4000"
+        app:shimmer_highlight_alpha="0.7"
+        app:shimmer_intensity="0.01"
+        app:shimmer_shape="linear"
+        app:shimmer_tilt="20">
+
+        <ir.riwi.batterylevelWave.WaveLoadingView
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:wlv_borderColor="@color/colorPrimary"
+            app:wlv_shapeType="battery"
+            app:wlv_titleCenter="50 %"
+            app:wlv_titleCenterColor="#fff"
+            app:wlv_waveAmplitude="4"
+            app:wlv_waveColor="#82AD0A"
+            app:wlv_wave_background_Color="#E2E2E2" />
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
